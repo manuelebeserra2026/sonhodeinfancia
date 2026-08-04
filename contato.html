@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>
+            Nem todos os sonhos permanecem
+        </title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/jpg" href="img/tototo.jpg">
+        <link rel="stylesheet" type="text/css" href="style.css">
+		<script language="javascript" type="text/javascript">
+			function validar(){
+                var nome = usuario.nome.value;
+                var nota = usuario.nota.value;
+
+                if(nome=="")
+                {
+                    alert('Preencha o CAMPO DO NOME!!!');
+                    usuario.nome.focus();
+                    return false;
+                }
+                if(nota=="")
+                {
+                    alert('Selecione uma NOTA!!!');
+                    usuario.nota.focus();
+                    return false;
+                }
+                return true;
+            }
+            function processarform(){
+				if(validar()){
+					alert("Dados enviados com sucesso!");
+					user.reset();
+				}
+				return false;
+			}
+        </script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <ul class="menu">
+                    <li><a href="index.html">Sonho</a></li>
+                    <li><a href="hoje.html">Hoje</a></li>
+                    <li><a href="futuro.html">Futuro</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul><hr>
+            </div>
+        </header>
+		<main>
+			<div class="cor">
+				<h1>
+					Contato
+				</h1>
+				<form name="usuario" onsubmit="return processarform()" method="post">
+					Nome:<input name="nome" type="text" size="40" maxlength="40"><br><br>
+					Nota:
+					<select name="nota">
+						<option value="">Selecione uma nota</option>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select><br><br>
+					Observações: <textarea cols="50" rows="5" name="comentario"></textarea><br><br>
+					<input name="Enviar" type="submit" value="enviar" onclick="return validar()">
+					<input name="Limpar" type="reset" value="limpar">
+				</form>
+			</div>
+		</main>
+		<footer><hr class="nana">
+			<div>
+				<a href="#">
+					<img src="img/seta.jpg" width="3%"/>
+				</a>
+			</div>
+            <h5 class="name">
+                Manuele Matsusato Beserra 2026- &copy Todos os direitos reservados <br> Trabalho acadêmico sem fins lucrativos
+            </h5>
+        </footer>
+    </body>
+</html>
